@@ -2,6 +2,21 @@
 
 Librarian was made to keep track of resources in the office as if they were books. Librarian will keep track of its library and who has what resources checked out.
 
+## Deploying
+
+1. create intergration bot named `Resource Librarian` (or what ever you want)
+1. get token for the new bot
+1. create a `librarian` directory on host machine
+1. copy `docker-compose.yml` to the `librarian` directory on host machine
+1. create `.env` with the following content in the `librarian` directory on host machine
+
+  ```
+SLACK_BOT_TOKEN={bot-token}
+LIBRARIAN_VERSION={version-you-want}
+  ```
+
+1. start librarian with `docker-compose up -d` from the `librarian` directory on host machine
+
 ## Testing
 
 In order to run the tests you need a valid slack bot token. Once you have the token export it in your shell
